@@ -1,13 +1,17 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header('Content-type: application/json');
 $host = 'localhost';
 $username = 'lab5_user';
-$password = '';
+$password = 'password123';
 $dbname = 'world';
-
+$cquer = htmlentities($_GET['country'],ENT_QUOTES, 'UTF-8');
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-$stmt = $conn->query("SELECT * FROM countries");
+$stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$cquer%'");
 
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 
 ?>
 <ul>
