@@ -13,15 +13,24 @@
 
 	<body>
 		<header>
-			<h1>World Database Lookup</h1>
+			<div class="container">
+				<h1>World Database Lookup</h1>
+			</div>
 		</header>
 
 		<main>
 			<div id="controls">
-				<label for="country">Country:</label>
-				<input id="country" type="search" name="country" placeholder="Enter country name" />
-				<button id="lookup">Lookup country</button>
-				<button id="lookupc">Lookup cities</button>
+				<div class="country">
+					<input id="country" type="search" name="country" placeholder="Enter country name" />
+				</div>
+				<div class = "lookup">
+					<button id="lookup">Lookup country</button>
+				</div>
+				
+				<div class = "lookupc">
+					<button id="lookupc">Lookup cities</button>
+				</div>
+				
 			</div>
 			
 			<div id="result">
